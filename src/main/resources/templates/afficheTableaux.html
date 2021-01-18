@@ -19,7 +19,7 @@ and open the template in the editor.
 		<h3 th:text="${message}">Message de succès ou d'erreur</h3>				
 		<ul>
 			<!--/* Pour chaque catégorie gdans la liste 'tableaux' transmise par le contrôleur */-->
-			<li th:each="g: ${galeries}">
+			<li th:each="g: ${tableaux}">
 				Titre: <em th:text="${g.titre}">Le titre du tableau</em>,
 				Dimension: <em th:text="${g.dimension}">La dimension du tableau</em>
                                 Support:<em th:text="${g.support}">Le support du tableau</em>

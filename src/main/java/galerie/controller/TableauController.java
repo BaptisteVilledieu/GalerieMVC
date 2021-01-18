@@ -6,7 +6,6 @@
 package galerie.controller;
 
 import galerie.dao.TableauRepository;
-import galerie.entity.Galerie;
 import galerie.entity.Tableau;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -53,6 +52,7 @@ public class TableauController {
         redirectInfo.addFlashAttribute("message", message);
         return "redirect:show"; 		
     }
+    
     @GetMapping(path = "delete")
     public String supprimeUnTableauPuisMontreLaListe(@RequestParam("id") Tableau tableau, RedirectAttributes redirectInfo) {
         String message = "Le Tableau '" + tableau.getTitre() + "' a bien été supprimé";
