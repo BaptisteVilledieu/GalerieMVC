@@ -16,16 +16,27 @@ and open the template in the editor.
 		<!--/* On appelle l'URL 'add' du contôleur */-->
 		<a th:href="@{add}" href='formulaireTableau.html'>Ajouter un tableau</a>
 		<!--/* On affiche un éventuel message d'erreur */-->
-		<h3 th:text="${message}">Message de succès ou d'erreur</h3>				
-		<ul>
-			<!--/* Pour chaque catégorie gdans la liste 'tableaux' transmise par le contrôleur */-->
-			<li th:each="g: ${tableaux}">
-				Titre: <em th:text="${g.titre}">Le titre du tableau</em>,
-				Dimension: <em th:text="${g.dimension}">La dimension du tableau</em>
-                                Support:<em th:text="${g.support}">Le support du tableau</em>
-                                <a th:href="@{delete(id=${g.id})}">Supprimer le tableau n° [[${g.id}]]</a>
-			</li>
-		</ul>
+		<h3 th:text="${message}">Message de succès ou d'erreur</h3>
+ 
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Titre</th>
+                            <th>Dimension</th>
+                            <th>Support</th>
+                            <th>Action</th>
+                        </tr>
+                        <tr>
+                            <tr th:each="t: ${tableaux}">
+                                <td th:text="${t.titre}">Le titre du tableau</td>
+                                <td th:text="${t.dimension}">La dimension du tableau</td>
+                                <td th:text="${t.support}">Le support du tableau</td>
+                                <td><a href="@{delete(id=${t.id})}">Supprimer le tableau n° [[${t.id}]]</a></td>
+                            </tr>
+                        </tr>
+                    </tbody>
+                </table>
+                
 		<hr/>
 		<a th:href="@{/}" href="../static/index.html">Retour au menu</a>
 		<hr/>

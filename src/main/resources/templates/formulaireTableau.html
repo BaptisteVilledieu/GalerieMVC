@@ -19,9 +19,7 @@ and open the template in the editor.
 			<div class="column">
 				<label for="titre">Titre:</label>
 				<!--/* th:field définit quel champ de l'objet est édité par cette zone de saisie */-->
-				<input type="text" th:field="*{titre}" placeholder="Titre du tableau"/>
-                                <hr/>
-				<input type="submit" value="Enregistrer" /> <input type="reset" value="Réinitialiser" />
+				<input type="text" th:field="*{titre}" placeholder="Titre du tableau"/>				
 			</div>
 			<div class="column">
 				<label for="dimension">Dimension:</label>
@@ -29,7 +27,9 @@ and open the template in the editor.
 			</div>
                         <div class="column">
 				<label for="support">Support:</label>
-				<input type="text" th:field="*{support}" placeholder="Support du tableau"/>				
+				<input type="text" th:field="*{support}" placeholder="Support du tableau"/>
+                                <hr/>
+                                <input type="submit" value="Enregistrer" /> <input type="reset" value="Réinitialiser" />            
 			</div>
 		</form>		
 		<hr/>
