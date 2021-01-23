@@ -25,7 +25,7 @@ and open the template in the editor.
                             <label for="auteur">Auteur</label>
                             <select th:field="*{auteur}" id="auteur">
                                 <option value="0">Pas d'auteur</option>
-                                <option th:each="a : ${auteurs}" th:value="${a.id}" th:text="${a.nom}"/>
+                                <option th:each="a : ${auteurs}" th:value="${a.id}" th:text="${a.nom}"></option>        
                             </select>
                         </div>
 			<div class="column">
