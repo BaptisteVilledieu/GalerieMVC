@@ -5,6 +5,7 @@
  */
 package galerie.controller;
 
+import galerie.dao.ArtisteRepository;
 import galerie.dao.TableauRepository;
 import galerie.entity.Tableau;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +29,7 @@ public class TableauController {
     
     @Autowired
     private TableauRepository dao;
+    
     
     @GetMapping(path = "show")
     public String afficheTousLesTableaux(Model model) {
