@@ -22,12 +22,11 @@ and open the template in the editor.
 				<input type="text" th:field="*{titre}" placeholder="Titre du tableau"/>				
 			</div>
                         <div class="column">
-                            <label for="auteur">Auteur:</label>
-                            <select id="auteur" name="auteur">
-                                <option value="0">Auteur inconnu</option>
-                                <option value="1">Pablo Picasso</option>
-                                <option value="2">Cy Twombly</option>
-                                </select>
+                            <label for="auteur">Auteur</label>
+                            <select th:field="*{auteur}" id="auteur">
+                                <option value="0">Pas d'auteur</option>
+                                <option th:each="a : ${auteurs}" th:value="${a.id}" th:text="${a.nom}"/>
+                            </select>
                         </div>
 			<div class="column">
 				<label for="dimension">Dimension:</label>
