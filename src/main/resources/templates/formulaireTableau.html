@@ -21,6 +21,14 @@ and open the template in the editor.
 				<!--/* th:field définit quel champ de l'objet est édité par cette zone de saisie */-->
 				<input type="text" th:field="*{titre}" placeholder="Titre du tableau"/>				
 			</div>
+                        <div class="column">
+                            <label for="auteur">Auteur:</label>
+                            <select id="auteur" name="auteur">
+                                <option value="0">Auteur inconnu</option>
+                                <option value="1">Pablo Picasso</option>
+                                <option value="2">Cy Twombly</option>
+                                </select>
+                        </div>
 			<div class="column">
 				<label for="dimension">Dimension:</label>
 				<input type="text" th:field="*{dimension}" placeholder="Dimension du tableau"/>				
@@ -28,12 +36,12 @@ and open the template in the editor.
                         <div class="column">
 				<label for="support">Support:</label>
 				<input type="text" th:field="*{support}" placeholder="Support du tableau"/>
-                                <hr/>
-                                <input type="submit" value="Enregistrer" /> <input type="reset" value="Réinitialiser" />            
+                            <hr/>
+                            <input type="submit" value="Enregistrer" /> <input type="reset" value="Réinitialiser" /> 
 			</div>
 		</form>		
 		<hr/>
 		<a th:href="@{/}" href="../static/index.html">Retour au menu</a>
-		<hr/>
+		<hr/>     
 	</body>
 </html>
